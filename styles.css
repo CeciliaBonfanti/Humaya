@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;/*fuente predeterminada del html: 10px*/
+}
+
+.navbar {
+  font-size: 2.5em;
+}
+
+.navbar-brand{
+  font-size: 1em;
+}
+
+.banner{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url(./img/Central/imagenCentral.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 66rem;
+  color: aliceblue;
+}
+
+.banner-text{
+  width: 45%;
+  padding: 3rem;
+}
+
+.banner-text h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 5em;
+  padding-bottom: 2rem;
+}
+
+.banner-text p{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size:  3em;
+  padding-bottom: 2rem;
+}
+
+.btn-container{
+  text-align: center;
+}
+
+.banner-btn{
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size:  2.5em;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+    
+}
+.banner-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  }
+
+.description-container{
+  height: 35rem;
+  background-color: #212529;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.description-container div{
+  width: 45rem;
+  text-align: center;
+}
+
+.description-text{
+  font-size: 3rem;
+  margin: 0;
+}
+
+.description-text{
+  padding: 3rem;
+}
+
+.description-container div img{
+  width: 40rem;
+  height: 10rem;
+}
+
+.description{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0 2rem;
+  font-size: 1.5em;
+}
+
+.description p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .banner-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    background-position: 60%;
+  }
+  .banner-text h1 {
+    font-size: 4em;
+    padding-bottom: 1.5rem;
+  }
+  .banner-text p{
+    font-size:  2.5em;
+    padding-bottom: 1.5rem;
+  }
+}
+  
