@@ -23,7 +23,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height: 66rem;
-  color: aliceblue;
+  color: white;
 }
 
 .banner-text{
@@ -35,12 +35,14 @@ html {
   font-family: 'Raleway', sans-serif;
   font-size: 5em;
   padding-bottom: 2rem;
+  margin: 0;
 }
 
 .banner-text p{
   font-family: 'Nunito Sans', sans-serif;
   font-size:  3em;
   padding-bottom: 2rem;
+  margin: 0;
 }
 
 .btn-container{
@@ -69,7 +71,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: antiquewhite;
+  color: white;
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -101,6 +103,71 @@ html {
 
 .description p {
   margin-bottom: 0;
+}
+
+.products{
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+  grid-auto-rows: 400px;
+}
+
+.products figure {
+  height: 100%;
+}
+
+.products img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 7rem;
+}
+
+.products:nth-child(2) figure {
+  order: 2;
+}
+
+.product-text h1{
+  font-family: 'Raleway', sans-serif;
+  font-size: 4em;
+  padding-bottom: 2rem;
+  margin: 0;
+  color: #d5ac8c;
+  align-self: center;
+}
+
+.product-text p{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2.5em;
+  padding-bottom: 2rem;
+  margin: 0;
+}
+
+.product-text p:nth-child(3) {
+  color: #d5ac8c;
+}
+
+.product-button{
+  display: flex;
+  justify-content: center;
+}
+
+.product-button button{
+  width: auto;
+  padding: 7px 15px;
+  border: solid 3px #d5ac8c;
+  color: #d5ac8c;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2em;
+  background-color: black;
 }
 
 @media (max-width: 1024px) {
