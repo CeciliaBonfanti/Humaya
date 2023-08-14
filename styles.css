@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+p{
+  margin: 0;
+}
+
+li { 
+  list-style: none; 
+}
+
 html {
   font-size: 62.5%;/*fuente predeterminada del html: 10px*/
 }
@@ -224,7 +232,135 @@ html {
   background-color: #d5ac8c;
 }
 
+.contact-title{
+  background-color: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito Sans', sans-serif;
+  color: white;
+  height: 10rem;
+  font-size: 2.5em;
+  margin: 0;
+}
 
+.contact{
+  background-image: url(./img/Productos/Producto4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 40rem;
+  color: #63421e;
+}
+
+.contact-form{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ height: 100%;
+ padding: 0 40rem 0 65rem;
+}
+
+.contact-form p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2em;
+  color: #63421e;
+  padding: 3rem 0 3rem 0;
+}
+
+.contact-form label{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5em;
+  color: #63421e;
+}
+
+.contact-form input{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5em;
+  background-color: #d5ac8c;
+  border: none;
+}
+
+.contact-form textarea{
+  height: 7rem;
+  background-color: #d5ac8c;
+  border: none;
+}
+
+.contact-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  background-color: #212529;
+}
+
+.cards-title{
+  font-family: 'Nunito Sans', sans-serif;
+  color: white;
+  font-size: 3rem;
+  align-self: center;
+  padding: 3rem 0;
+}
+
+.cards-items{
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.card-item {
+  width: 35rem;
+  height: auto;
+}
+
+.card-item-li {
+  background-color: #d5ac8c;
+}
+
+.card-picture img{
+  width: 100%;
+  height: 50%;
+}
+
+.card-item-text{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+.card-item-text h2{
+  align-self: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3em;
+  color: #63421e;
+  padding-bottom: 1rem;
+}
+
+.card-item-text p{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2em;
+  color: white;
+}
+
+.card-btn{
+  align-self: center;
+  justify-self: end;
+  margin: 2rem 0;
+}
+
+.card-btn button{
+  background-color: #d5ac8c;
+  padding: 0.6rem 2rem;
+  font-size: 1.2em;
+  font-family: 'Nunito Sans', sans-serif;
+  color: black;
+  border: solid 2px#63421e;;
+}
 
 @media (max-width: 1024px) {
   .banner-text {
