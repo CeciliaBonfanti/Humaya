@@ -160,7 +160,6 @@ html {
 }
 
 .product-button button{
-  width: auto;
   padding: 7px 15px;
   border: solid 3px #d5ac8c;
   color: #d5ac8c;
@@ -169,6 +168,63 @@ html {
   font-size: 2em;
   background-color: black;
 }
+
+.maicena-container{
+  background-color: #d5ac8c;
+  background-image: url(./img/Productos/Producto4b.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  height: 40rem;
+  color: white;
+}
+
+.maicena-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+  padding-left: 15rem;
+}
+
+.maicena-text h1{
+  font-family: 'Raleway', sans-serif;
+  font-size: 4em;
+  padding-bottom: 2rem;
+  margin: 0;
+  color: #63421e;
+}
+
+.maicena-text p{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2.5em;
+  padding-bottom: 2rem;
+  margin: 0;
+}
+
+.maicena-text p:nth-child(3) {
+  color: #63421e;
+}
+
+.maicena-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.maicena-button button{
+  padding: 7px 15px;
+  border: solid 3px #63421e;
+  color: #63421e;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2em;
+  background-color: #d5ac8c;
+}
+
+
 
 @media (max-width: 1024px) {
   .banner-text {
