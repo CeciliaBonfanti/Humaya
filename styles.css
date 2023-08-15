@@ -11,6 +11,11 @@ li {
   list-style: none; 
 }
 
+a{
+  text-decoration: none;
+  
+}
+
 html {
   font-size: 62.5%;/*fuente predeterminada del html: 10px*/
 }
@@ -333,6 +338,7 @@ html {
 .card-picture img{
   width: 100%;
   height: 50%;
+  padding: 0;
 }
 
 .card-item-text{
@@ -367,6 +373,55 @@ html {
   font-family: 'Nunito Sans', sans-serif;
   color: black;
   border: solid 2px#63421e;;
+}
+
+.footer{
+  display: flex;
+  background-color: black;
+}
+
+picture{
+  align-self: center;
+}
+
+picture img{
+  width: 13rem;
+  padding-left: 2rem;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+  margin: 0;
+  width: 100%;
+}
+
+.footer__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__item:nth-child(3){
+  align-items: center;
+}
+
+.footer__item h2{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3em;
+  color: #d5ac8c;
+  padding: 3rem 0 1rem 0;
+}
+
+.footer__item a{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3em;
+  color:white;
+  padding-bottom: 1rem;
+}
+
+.footer__item img{
+  margin: 1rem 0 1rem 0;
 }
 
 @media (max-width: 1024px) {
