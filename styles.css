@@ -13,7 +13,6 @@ li {
 
 a{
   text-decoration: none;
-  
 }
 
 html {
@@ -88,40 +87,33 @@ html {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.description-container div{
+.description {
   width: 45rem;
   text-align: center;
 }
 
-.description-text{
+.description-title{
   font-size: 3rem;
   margin: 0;
-}
-
-.description-text{
   padding: 3rem;
 }
 
-.description-container div img{
+.description img{
   width: 40rem;
-  height: 10rem;
+  height: 11rem;
 }
 
-.description{
+.description-text{
   display: flex;
   justify-content: space-between;
   padding: 0 0 0 2rem;
   font-size: 1.5em;
 }
 
-.description p {
-  margin-bottom: 0;
-}
-
 .products{
   display: grid;
   grid-template-columns: repeat(2,50%);
-  grid-auto-rows: 400px;
+  grid-auto-rows: 40rem;
 }
 
 .products figure {
@@ -180,6 +172,7 @@ html {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 2em;
   background-color: black;
+  margin-top: 1rem;
 }
 
 .maicena-container{
@@ -228,7 +221,7 @@ html {
 }
 
 .maicena-button button{
-  padding: 7px 15px;
+  padding: 0.7rem 1.5rem;
   border: solid 3px #63421e;
   color: #63421e;
   cursor: pointer;
@@ -249,41 +242,50 @@ html {
   margin: 0;
 }
 
-.contact{
+.contact-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-image: url(./img/Productos/Producto4.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
-  height: 40rem;
+  height: 50rem;
   color: #63421e;
+}
+
+.contact{
+  width: 60%;
+  padding-right: 11rem;
 }
 
 .contact-form{
  display: flex;
  flex-direction: column;
- justify-content: center;
- height: 100%;
- padding: 0 40rem 0 65rem;
 }
 
 .contact-form p {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 2em;
+  font-size: 2.5em;
+  font-weight: bold;
   color: #63421e;
-  padding: 3rem 0 3rem 0;
+  padding: 2rem 0 2rem 0;
 }
 
 .contact-form label{
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.5em;
+  font-weight: bold;
+  font-size: 2em;
   color: #63421e;
 }
 
 .contact-form input{
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.5em;
+  font-size: 2em;
+  font-weight: bold;
   background-color: #d5ac8c;
   border: none;
+
 }
 
 .contact-form textarea{
@@ -310,6 +312,7 @@ html {
   display: flex;
   flex-direction: column;
   background-color: #212529;
+  padding: 2rem;
 }
 
 .cards-title{
@@ -378,6 +381,7 @@ html {
 .footer{
   display: flex;
   background-color: black;
+  padding: 4rem;
 }
 
 picture{
@@ -386,7 +390,6 @@ picture{
 
 picture img{
   width: 13rem;
-  padding-left: 2rem;
 }
 
 .footer-items {
@@ -424,12 +427,14 @@ picture img{
   margin: 1rem 0 1rem 0;
 }
 
+
+/*MEDIA QUERIS*/
+/*BANNER*/
 @media (max-width: 1024px) {
   .banner-text {
     width: 100%;
   }
 }
-
 @media (max-width: 600px) {
   .banner {
     background-position: 60%;
@@ -443,4 +448,130 @@ picture img{
     padding-bottom: 1.5rem;
   }
 }
+/*DESCRIPCION: PRODUCTOS DE CALIDAD, ORGANICOS...*/
+@media (max-width: 600px){
+  .description img{
+    width: 25rem;
+    height: 7rem;
+  }
+  .description {
+    width: 30rem;
+  }
+  .description-title {
+    font-size: 2rem;
+  }
+  .description-text{
+    font-size: 1em;
+  }
+}
+
+/*SECCION PRODUCTOS*/
+@media (max-width: 1410px){
+  .product-text h1{
+    font-size: 3em;
+    padding-bottom: 1rem;
+  }
+  .product-text p{
+    font-size: 2em;
+    padding-bottom: 1rem;
+  }
+  .product-button button{
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 780px){
+  .products {
+    grid-template-columns: 1fr; /* una sola columna */
+    grid-auto-rows: auto; /*altura automática */
+  }
+
+  .products figure {
+    display: none; /* se ocultan las imágenes en la vista móvil */
+  }
+
+  .product-text {
+    /* Se añade las imágenes como fondo */
+    background-size: cover;
+    background-position: center;
+    border-bottom: solid 6px black;
+  }
+  .product1 {
+    background-image: url('./img/Productos/Producto1.png');
+  }
+
+  .product2 {
+    background-image: url('./img/Productos/Producto2.png');
+  }
+
+  .product3 {
+    background-image: url('./img/Productos/Producto3.png');
+  }
+
+  .mobile-transparencia{
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+  }
+}
+
+/*SECCION ALFAJORES DE MAICENA*/
+@media (max-width: 1410px){
+  .maicena-text{
+    padding-left: 10rem;
+  }
+}
+
+@media (max-width: 1100px){
+  .maicena-text{
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 950px){
+  .maicena-text h1{
+    font-size: 3em;
+    padding-bottom: 1rem;
+  }
   
+  .maicena-text p{
+    font-size: 2em;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 950px){
+  .maicena-text h1{
+    font-size: 2em;
+  }
+  
+  .maicena-text p{
+    font-size: 1.5em;
+  }
+
+  .maicena-button button{
+    padding: 0.5rem 1rem;
+    font-size: 1.5em;
+  }
+}
+/*CONTACTO*/
+@media(max-width: 1300px){
+  .contact{
+    width: 50%;
+    padding-right: 9rem;
+  }
+}
+@media(max-width: 768px){
+  .contact{
+    width: 55%;
+    padding-right: 3rem;
+  }
+}
+@media(max-width: 600px){
+  .contact{
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .contact-container{
+    background-image: none;
+  }
+}
