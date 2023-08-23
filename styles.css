@@ -17,6 +17,7 @@ a{
 
 html {
   font-size: 62.5%;/*fuente predeterminada del html: 10px*/
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -348,7 +349,7 @@ html {
 .card-item-text{
   display: flex;
   flex-direction: column;
-  padding: 2rem 4rem;
+  padding: 2rem 3rem;
 }
 
 .card-item-text h2{
@@ -380,7 +381,6 @@ html {
   font-weight: bold;
   color: black;
   border: solid 2px#63421e;
-
 }
 
 .glide__arrows {
@@ -391,14 +391,15 @@ html {
 
 .glide__arrow {
   position: absolute;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);;
   border: none;
   color: #000;
   padding: 15px 15px;
 }
 
 .glide__arrow:hover {
-  background-color: #eee;}
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
 .glide__arrow--left {
   left: 0;
@@ -407,7 +408,6 @@ html {
 .glide__arrow--right {
   right: 0;
 }
-
 
 .footer{
   display: flex;
@@ -425,7 +425,6 @@ html {
 .footer-logo img {
   width: 13rem;
 }
-
 
 .footer-items {
   display: flex;
@@ -606,6 +605,16 @@ html {
   }
   .contact-container{
     background-image: none;
+  }
+}
+
+/*  CARROUSEL*/
+@media (max-width: 1200px){
+  .glide{
+    width: 90%;
+  }
+  .glide__arrows {
+    top: 30%;
   }
 }
 
