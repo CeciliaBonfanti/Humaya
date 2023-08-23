@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Nunito+Sans:opsz,wght@6..12,300&family=Quicksand:wght@400;500&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Nunito+Sans:opsz,wght@6..12,300&family=Quicksand:wght@400;500&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="img-fluid">
@@ -134,91 +135,115 @@
             </div>
         </section>
 
+
         <section class="cards">
             <h2 class="cards-title">Recetas</h2>
-            <ul class="cards-items">
-                <li class="card-item-li">
-                    <article class="card-item">
-                        <picture class="card-picture">
-                        <img src="./img/Productos/conitos_ddl.PNG" alt="Conitos de dulce de leche">
-                        </picture>
-                        <div class="card-item-text">
-                        <h2>CONITOS</h2>
-                        <p>
-                            Una deliciosa opción para acompañar las meriendas, ese antojo de media noche o compartit con amigos.
-                        </p>
-                        <div class="card-btn"><button>PREPARACIÓN</button</div> 
-                        </div>
-                    </article>
-                </li>
-                <li class="card-item-li">
-                    <article class="card-item">
-                        <picture class="card-picture">
-                        <img src="./img/Productos/pepas_ddl.PNG" alt="Conitos de dulce de leche">
-                        </picture>
-                        <div class="card-item-text">
-                        <h2>PEPAS</h2>
-                        <p>
-                            Las galletitas mas tiernas y ricas, rellenas de dulce de leche, ideales para el mate y la hora del té.
-                        </p>
-                        <div class="card-btn"><button>PREPARACIÓN</button></div>
-                        </div>
-                    </article>
-                </li>
-                <li class="card-item-li">
-                    <article class="card-item">
-                        <picture class="card-picture">
-                        <img src="./img/Productos/torta_nuitt.PNG" alt="Conitos de dulce de leche">
-                        </picture>
-                        <div class="card-item-text">
-                        <h2>TORTA NUTT</h2>
-                        <p>
-                            La torta de tres capas más sabrosa del mundo, combina una base de vainilla, dulce de leche y cubierta de choconutt.
-                        </p>
-                        <div class="card-btn"><button>PREPARACIÓN</button</div> 
-                        </div>
-                    </article>
-                </li>
-            </ul>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <article class="card-item">
+                                <picture class="card-picture">
+                                    <img src="./img/Productos/conitos_ddl.PNG" alt="Conitos de dulce de leche">
+                                </picture>
+                                    <div class="card-item-text">
+                                        <h2>CONITOS</h2>
+                                        <p>
+                                            Una deliciosa opción para acompañar las meriendas, ese antojo de media noche o compartit con amigos.
+                                        </p>
+                                    </div>
+                                    <div class="card-btn"><button>PREPARACIÓN</button</div> 
+                            </article>
+                        </li>
+                        <li class="glide__slide">
+                            <article class="card-item">
+                                <picture class="card-picture">
+                                    <img src="./img/Productos/pepas_ddl.PNG" alt="Conitos de dulce de leche">
+                                </picture>
+                                    <div class="card-item-text">
+                                        <h2>PEPAS</h2>
+                                        <p>
+                                            Las galletitas mas tiernas y ricas, rellenas de dulce de leche, ideales para el mate y la hora del té.
+                                        </p>
+                                    </div>
+                                    <div class="card-btn"><button>PREPARACIÓN</button></div>
+                            </article>
+                        </li>
+                        <li class="glide__slide">
+                            <article class="card-item">
+                                <picture class="card-picture">
+                                    <img src="./img/Productos/torta_nuitt.PNG" alt="Conitos de dulce de leche">
+                                </picture>
+                                    <div class="card-item-text">
+                                        <h2>TORTA NUTT</h2>
+                                        <p>
+                                            La torta de tres capas combina una base de vainilla, dulce de leche y cubierta de choconutt.
+                                        </p>
+                                    </div>
+                                    <div class="card-btn"><button>PREPARACIÓN</button</div> 
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="black" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z"/></svg></iconify-icon>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="black" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/></svg></button>
+                  </div>
+                </div>
+            </div>
             <h2 class="cards-title">Encontranos en:</h2>
         </section>
     </main>
 
     <footer>
+        
         <nav class="footer">
-            <picture>
-                <img src="./img/Logo/LogoHumaya100x100.png" alt="Isotipo de la marca FuncoShop">
+            <picture class="footer-logo">
+                <img src="./img/Logo/LogoHumaya100x100.png" alt="Logo de la marca Humaya">
             </picture>
             <ul class="footer-items">
                 <li class="footer__item">
                     <h2>MENÚ</h2>
-                    <a class="menu" href="#home">Home</a>
-                    <a class="menu" href="#productos">Productos</a>
-                    <a class="menu" href="#locales">Locales</a>
-                    <a class="menu" href="#contactos">Contactos</a>
+                    <a href="#home">Home</a>
+                    <a href="#productos">Productos</a>
+                    <a href="#locales">Locales</a>
+                    <a href="#contactos">Contactos</a>
                 </li>
                 <li class="footer__item">
                     <h2>NAVEGACIÓN</h2>
-                    <a class="navegacion" href="#faq">Preguntas frecuentes</a>
-                    <a class="navegacion" href="#">Distribuidores</a>
-                    <a class="navegacion" href="#">Prensa</a>
-                    <a class="navegacion" href="#">Recetas exclusivas</a>
+                    <a href="#faq">Preguntas frecuentes</a>
+                    <a href="#">Distribuidores</a>
+                    <a href="#">Prensa</a>
+                    <a href="#">Recetas exclusivas</a>
                 </li>
                 <li class="footer__item">
                     <h2>REDES</h2>
-                    <a class="redes" href="#"><img src="./img/Logo/instagramlogo.PNG" alt="Logo Instagram"></a>
-                    <a class="redes" href="#"><img src="./img/Logo/facebooklogo.PNG" alt="Logo Facebook"></a>
-                    <a class="redes" href="#"><img src="./img/Logo/tiktoklogo.PNG" alt="Logo TikTok"></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 15 15"><path fill="none" stroke="white" d="M11 3.5h1M4.5.5h6a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-6a4 4 0 0 1-4-4v-6a4 4 0 0 1 4-4Zm3 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Z"/></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 32 32"><path fill="white" d="M7 5c-1.094 0-2 .906-2 2v18c0 1.094.906 2 2 2h18c1.094 0 2-.906 2-2V7c0-1.094-.906-2-2-2zm0 2h18v18h-5.188v-6.75h2.594l.375-3h-2.968v-1.938c0-.874.214-1.468 1.468-1.468h1.625V9.125c-.277-.035-1.238-.094-2.343-.094c-2.305 0-3.875 1.387-3.875 3.969v2.25h-2.625v3h2.624V25H7z"/></svg></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M21 8v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5Z"/><path d="M10 12a3 3 0 1 0 3 3V6c.333 1 1.6 3 4 3"/></g></svg></a>
                 </li>
                 <li class="footer__item">
                     <h2>UBICACIÓN</h2>
-                    <a class="ubicacion" href=""><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29571.96638043001!2d-65.63658533383789!3d-22.107064517233344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9406a41f6ab81251%3A0x7d22854bef4eda39!2sLa%20Quiaca%2C%20Jujuy!5e0!3m2!1ses-419!2sar!4v1692064717957!5m2!1ses-419!2sar" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></a>
+                    <a class="ubicacion" href=""><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29571.96638043001!2d-65.63658533383789!3d-22.107064517233344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9406a41f6ab81251%3A0x7d22854bef4eda39!2sLa%20Quiaca%2C%20Jujuy!5e0!3m2!1ses-419!2sar!4v1692064717957!5m2!1ses-200!2sar" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></a>
                 </li>
             </ul>
         </nav>
     </footer>
 
+    
 <!--Scripts de Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--Scripts de glide.js-->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script src="https://unpkg.com/@glidejs/glide"></script>
+
+<script>
+    new Glide('.glide',{
+        perView: 3,
+        type: 'carousel'
+    }).mount()
+</script>
+
 </body>
 </html>
