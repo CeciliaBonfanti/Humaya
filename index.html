@@ -137,63 +137,65 @@
         </section>
 
 
-        <section class="cards">
-            <h2 class="cards-title">Recetas</h2>
-            <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide">
-                            <article class="card-item">
-                                <picture class="card-picture">
-                                    <img src="./img/Productos/conitos_ddl.PNG" alt="Conitos de dulce de leche">
-                                </picture>
-                                    <div class="card-item-text">
-                                        <h2>CONITOS</h2>
-                                        <p>
-                                            Una deliciosa opción para acompañar las meriendas, ese antojo de media noche o compartir con amigos.
-                                        </p>
-                                    </div>
-                                    <div class="card-btn"><button>PREPARACIÓN</button</div> 
-                            </article>
+        <section class="carrousel">
+            <h2 class="carrousel-title">Recetas</h2>
+            <div class="carrousel-cards" id="wrapper" >
+                <button class="arrowBtn" id="prev"  data-button="button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <path fill="black" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z"/>
+                    </svg>
+                </button>
+                <ul class="cards" id="carousel">
+                        <li class="card-item" id="card">
+                            <picture class="card-picture">
+                                <img draggable="false" src="./img/Productos/conitos_ddl.PNG" alt="Conitos de dulce de leche">
+                            </picture>
+                                <div class="card-text">
+                                    <h2>CONITOS</h2>
+                                    <p>
+                                        Una deliciosa opción para acompañar las meriendas, ese antojo de media noche o compartir con amigos.
+                                    </p>
+                                </div>
+                                <div class="card-btn"><button>PREPARACIÓN</button</div> 
                         </li>
-                        <li class="glide__slide">
-                            <article class="card-item">
+                        
+                            <li class="card-item">
                                 <picture class="card-picture">
-                                    <img src="./img/Productos/pepas_ddl.PNG" alt="Conitos de dulce de leche">
+                                    <img draggable="false" src="./img/Productos/pepas_ddl.PNG" alt="Galletitas Pepas">
                                 </picture>
-                                    <div class="card-item-text">
+                                    <div class="card-text">
                                         <h2>PEPAS</h2>
                                         <p>
                                             Las galletitas mas tiernas y ricas, rellenas de dulce de leche, ideales para el mate y la hora del té.
                                         </p>
                                     </div>
                                     <div class="card-btn"><button>PREPARACIÓN</button></div>
-                            </article>
-                        </li>
-                        <li class="glide__slide">
-                            <article class="card-item">
+                            </li>
+
+                            <li class="card-item">
                                 <picture class="card-picture">
-                                    <img src="./img/Productos/torta_nuitt.PNG" alt="Conitos de dulce de leche">
+                                    <img draggable="false" src="./img/Productos/torta_nuitt.PNG" alt="Torta Nutt">
                                 </picture>
-                                    <div class="card-item-text">
+                                    <div class="card-text">
                                         <h2>TORTA NUTT</h2>
                                         <p>
                                             La torta de tres capas más sabrosa combina una base de vainilla, dulce de leche y cubierta de choconutt.
                                         </p>
                                     </div>
                                     <div class="card-btn"><button>PREPARACIÓN</button</div> 
-                            </article>
-                        </li>
+                                    </li>
+
                     </ul>
-                </div>
-                <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="black" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z"/></svg></iconify-icon>
+                    
+                    <button class="arrowBtn" id="next" data-button="button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <path fill="black" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/>
+                        </svg>
                     </button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="black" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/></svg></button>
-                  </div>
+                   
                 </div>
             </div>
-            <h2 class="cards-title">Encontranos en:</h2>
+            <h2 class="carrousel-title">Encontranos en:</h2>
         </section>
     </main>
 
@@ -235,24 +237,8 @@
     
 <!--Scripts de Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<!--Scripts de glide.js-->
-<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-<script src="https://unpkg.com/@glidejs/glide"></script>
-
-<script>
-    new Glide('.glide',{
-        perView: 3,
-        type: 'carousel',
-        breakpoints: {
-    1080: {
-      perView: 2
-    },
-    600: {
-      perView: 1
-    }}
-    }).mount()
 </script>
 <!--Script de script.js-->
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -1,10 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 p{
   margin: 0;
+}
+
+ul{
+  padding: 0;
 }
 
 li { 
@@ -310,14 +315,47 @@ html {
   color: #63421e;
 }
 
-.cards{
+.carrousel{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background: #212529;
   flex-direction: column;
-  background-color: #212529;
-  padding: 3rem;
 }
 
-.cards-title{
+.cards .card-item{
+  scroll-snap-align: start;
+  height: 500px;
+  background-color: #d5ac8c;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carrousel-cards{
+  width: 70%;
+  position: relative;
+}
+
+.carrousel-cards .cards{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+.cards::-webkit-scrollbar{
+  display: none;
+}
+
+.carrousel-title{
   font-family: 'Nunito Sans', sans-serif;
   color: white;
   font-size: 3rem;
@@ -325,42 +363,52 @@ html {
   padding: 3rem 0;
 }
 
-.glide{
-  width: 70%;
-  height: 100%;
-  align-self: center;
-}
-
-.glide__slides{
+.cards :where(.card-item, img){
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.glide__slide {
-  height: auto;
-  background-color: #d5ac8c;
+.cards.no-transition{
+  scroll-behavior: auto;
 }
 
+.cards.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.cards.dragging .card-item{
+  cursor: grab;
+  user-select: none;
+}
+
+.card-picture{
+  width: 100%;
+  height: 40%;
+}
 .card-picture img{
   width: 100%;
-  padding: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
-.card-item-text{
+.card-text{
+  padding: 2rem 2.5rem 1rem 2.5rem;
   display: flex;
   flex-direction: column;
-  padding: 2rem 3rem;
 }
 
-.card-item-text h2{
+.card-text h2{
   align-self: center;
   font-family: 'Raleway', sans-serif;
-  font-size: 3em;
+  font-size: 2.5em;
   color: #63421e;
-  padding-bottom: 1rem;
+  padding: 0.5rem 0;
 }
 
-.card-item-text p{
+.card-text p{
   font-family: 'Nunito Sans', sans-serif;
   font-size: 2em;
   color: white;
@@ -370,43 +418,35 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem;
 }
 
 .card-btn button {
   background-color: #d5ac8c;
-  padding: 0.6rem 2rem;
+  padding: 0.5rem 1rem;
   font-size: 1.2em;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: bold;
-  color: black;
+  color: #63421e;
   border: solid 2px#63421e;
 }
 
-.glide__arrows {
+.arrowBtn {
   position: absolute;
-  top: 35%;
-  width: 100%;
-}
-
-.glide__arrow {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);;
+  background-color:#d5ac8c;
   border: none;
-  color: #000;
-  padding: 15px 15px;
+  padding: 12px 12px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-90%);
+  box-shadow: 0 3px 6px rgb(0, 0, 0, 0.25);
 }
 
-.glide__arrow:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+.arrowBtn:first-child {
+  left: -22px;
 }
 
-.glide__arrow--left {
-  left: 0;
-}
-
-.glide__arrow--right {
-  right: 0;
+.arrowBtn:last-child {
+  right: -22px;
 }
 
 .footer{
@@ -609,12 +649,15 @@ html {
 }
 
 /*  CARROUSEL*/
-@media (max-width: 1200px){
-  .glide{
-    width: 90%;
+
+@media (max-width: 1024px){
+  .carrousel-cards .cards{
+    grid-auto-columns: calc((100% / 2) - 9px);
   }
-  .glide__arrows {
-    top: 30%;
+}
+@media(max-width: 620px){
+ .carrousel-cards .cards{
+  grid-auto-columns: 100%;
   }
 }
 
