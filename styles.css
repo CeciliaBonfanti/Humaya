@@ -414,6 +414,13 @@ html {
   color: white;
 }
 
+.card-text p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
 .card-btn{
   display: flex;
   justify-content: center;

@@ -54,9 +54,13 @@ const cargarRecetas = async() => {
 
         if(respuesta.status === 200){
             const datos = await respuesta.json();
+            console.log(datos);
             let recetas = "";
             
             datos.results.forEach((receta, i) => {
+                let base_url = "https://tasty.co/recipe/";
+                let recipe_url = base_url + receta.slug;
+
                 recetas += `
                 <li class="card-item">
                     <picture class="card-picture">
@@ -66,7 +70,9 @@ const cargarRecetas = async() => {
                         <h2>${receta.name}</h2>
                         <p>${receta.description}</p>
                     </div>
-                    <div class="card-btn"><button>PREPARACIÓN</button></div> 
+                    <div class="card-btn">
+                    <a href="${recipe_url}" target="_blank"><button>PREPARACIÓN</button></a>
+                    </div> 
                 </li>`;
             });
             document.querySelector('.cards').innerHTML += recetas;
