@@ -1,4 +1,5 @@
-const carrouselCards = document.querySelector('carrousel-cards')
+/*Carrousel*/ 
+const carrouselCards = document.querySelector('.carrousel-cards')
 const carrousel = document.querySelector('.cards');
 const arrowBtns = document.querySelectorAll('.arrowBtn');
 const firstCardWidth = carrousel.querySelector('.card-item').offsetWidth;
@@ -7,14 +8,6 @@ const carrouselChildrens = [...carrousel.children];
 let isDragging = false, startX, startScrollLeft, timeoutId;
 
 let cardPerView = Math.round(carrousel.offsetWidth / firstCardWidth);
-
-carrouselChildrens.slice(-cardPerView).reverse().forEach(card =>{
-    carrousel.insertAdjacentHTML('afterbegin',card.outerHTML);
-})
-
-carrouselChildrens.slice(0,-cardPerView).forEach(card =>{
-    carrousel.insertAdjacentHTML('beforeend',card.outerHTML);
-})
 
 arrowBtns.forEach(btn =>{
    btn.addEventListener('click', () =>{
@@ -38,36 +31,15 @@ const dragStop = () => {
     carrousel.classList.remove('dragging'); 
 }
 
-const autoPlay = () => {
-    if(window.innerWidth < 800) return;
-    timeoutId = setTimeout(()=>carrousel.scrollLeft += firstCardWidth, 2500);
-}
-autoPlay();
-
-const infiniteScroll = () => {
-    if(carrousel.scrollLeft === 0) {
-        carrousel.classList.add('no-transition');
-        carrousel.scrollLeft = carrousel.scrollWidth - ( 2 * carrousel.offsetWidth);
-        carrousel.classList.remove('no-transition');
-
-    }else if(Math.ceil(carrousel.scrollLeft) === carrousel.scrollWidth - carrousel.offsetWidth) {
-        carrousel.classList.add('no-transition');
-        carrousel.scrollLeft = carrousel.offsetWidth;
-        carrousel.classList.remove('no-transition');
-    }
-    clearTimeout(timeoutId);
-    if(!carrouselCards.matched(":hover")) autoPlay();
-}
 
 carrousel.addEventListener('mousedown',dragStart)
 carrousel.addEventListener('mousemove', dragging);
 document.addEventListener('mouseup',dragStop);
-carrousel.addEventListener('scroll', infiniteScroll);
 carrouselCards.addEventListener('mouseenter',() =>clearTimeout(timeoutId));
-carrouselCards.addEventListener('mouseleave',autoPlay);
-/*let glide = new Glide('.glide');
+
+/*Consulta a la api */
 const cargarRecetas = async() => {
-    const url = 'https://tasty.p.rapidapi.com/recipes/list?q=desserts&from=0&size=3';
+    const url = 'https://tasty.p.rapidapi.com/recipes/list?q=desserts&from=0&size=5';
     const options = {
         method: 'GET',
         headers: {
@@ -86,24 +58,19 @@ const cargarRecetas = async() => {
             
             datos.results.forEach((receta, i) => {
                 recetas += `
-                <li class="glide__slide api-content">
-                    <article class="card-item">
-                        <picture class="card-picture">
-                            <img src="${receta.thumbnail_url}" alt="${receta.name}">
-                        </picture>
-                        <div class="card-item-text">
-                            <h2>${receta.name}</h2>
-                            <p>${receta.description}</p>
-                        </div>
-                        <div class="card-btn"><button>PREPARACIÓN</button></div> 
-                    </article>
+                <li class="card-item">
+                    <picture class="card-picture">
+                        <img draggable="false" src="${receta.thumbnail_url}" alt="${receta.name}">
+                    </picture>
+                    <div class="card-text">
+                        <h2>${receta.name}</h2>
+                        <p>${receta.description}</p>
+                    </div>
+                    <div class="card-btn"><button>PREPARACIÓN</button></div> 
                 </li>`;
             });
-
-            document.querySelector('.glide__slides').innerHTML += recetas;
-            glide.destroy();
-            glide = new Glide('.glide');
-            glide.mount();
+            document.querySelector('.cards').innerHTML += recetas;
+            
         } else {
             console.log("Hubo un error al obtener las recetas");
         }
@@ -113,4 +80,7 @@ const cargarRecetas = async() => {
     }
 }
 
-cargarRecetas();*/
+cargarRecetas();
+
+    
+
